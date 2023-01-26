@@ -22,7 +22,7 @@ Existe un cierto tipo de operaciones especiales, llamadas FXSwaps. Estas pueden 
 
 **mfamily = CURR**\
 **mgroup = FXD**\
-**mtype = SWLEG**
+**mtype = SWLEG**\
 
 Podemos ver en nuestro dataset que estas operaciones aparecen duplicadas, es decir, con el mismo **origin_contract_number** aunque distinto **origin_trade_number**. De estas operaciones duplicadas en origen, queremos obtener solo una de ellas.
 
