@@ -1,18 +1,22 @@
-<h1>Mi Web personal</h1>
+{% extends 'core/base.html' %}
 
-<ul>
-    <li><a href="/">Portada</a></li>
-    <li><a href="/about-me">Acerca de</a></li>
-    <li><a href="/portfolio">Portfolio</a></li>
-    <li><a href="/contact">Contact</a></li>
-</ul
+{% block title%} Contact {% endblock %}
 
-<h2>Contacto</h2>
+{% block background %}{%load static %}{% static 'core/img/contact-bg.jpg' %}{% endblock %}
 
-<h3>Descripción de contacto</h3>
+{% block headers %}
+<h1>Contacto</h1>
+<span class="subheading">Asesoría</span>
+{% endblock %}	
 
-<p>Este es mi contacto: 
-  <p>Telefono:+52 123 4567
-  <p>Dirección: 123456789
-  <p>Email: jessica@gmail.com
-</p>
+{% block content %}
+<div class="row">
+  <div class="col-lg-8 col-md-10 mx-auto">
+    <p>Descripcion de Contacto </p>
+    <br>
+    <p><b>Teléfono:</b> +09 876 543 210</p>
+    <p><b>Email:</b> jesicalopezgomez84@gmail.com</p>
+    <p><b>Honorarios:</b> 60€/h (precio base)</p>
+  </div>
+</div>
+{% endblock %}

@@ -1,13 +1,12 @@
-<h1>Mi Web personal</h1>
+{% extends 'core/base.html' %}
 
-<ul>
-    <li><a href="/">Portada</a></li>
-    <li><a href="/about-me">Acerca de</a></li>
-    <li><a href="/portfolio">Portfolio</a></li>
-    <li><a href="/contact">Contact</a></li>
-</ul
+{% block title%}Jesica López | Portada {% endblock %}
 
-<h2>Portada</h2>
+{% block background %}{%load static %}{% static 'core/img/home-bg.jpg' %}{% endblock %}
 
-<p>Esto es la portada</p>
+{% block headers %}
+<h1>Jesica López</h1>
+<span class="subheading">Full Stack Developer</span>
+{% endblock %}	
+
 
