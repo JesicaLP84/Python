@@ -38,3 +38,15 @@
     - En settings configuramos el idioma de admin e indicamos el nuevo nombre de la app indicado en apps.services
 
     AÑADIR ESTA PARTE QUE ES EL DEL PUNTO ULTIMO QUE HE REALIZADO
+
+5.- Crear la app blog para  las relaciones forengkin o manitomany .. para declarar varias instancias
+    - Creamos la app blog y luego a models para crear los modelos . uno para categorias y otro para los pots
+    APUNTE = tema de importar timezone.now con las migraciones indica siempre una incidencia. se cambia en from django.utils.timezone import now y por default = now para que asi quede que se muestre reflejada la fecha de publicación actual en la clase del modelo
+
+    -- Cuando meto la publicación en admin, reviso el sitio y no me aparece publicaa, incluso poniendole la hora de ahora 
+
+6.- Editar Admin en el blog:
+    Para poder visualizar mas categorias en el servidor, añadimos la list_display
+
+7.- Crear Vistas al Blog:
+    Carpeta templates/blog creando el archivo views.blog

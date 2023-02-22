@@ -21,6 +21,8 @@ from django.conf import settings
 urlpatterns = [
     # Paths del core -- la genero del segundo ejercicio
     path('', include('core.urls')),
+    # Paths del blog 
+    path('blog/', include('blog.urls')),
     # Paths de services
     path('services/', include('services.urls')),
     # Paths del admin -- viene ya generada
