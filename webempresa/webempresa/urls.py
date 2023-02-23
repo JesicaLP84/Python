@@ -21,10 +21,14 @@ from django.conf import settings
 urlpatterns = [
     # Paths del core -- la genero del segundo ejercicio
     path('', include('core.urls')),
-    # Paths del blog 
+    # Paths del blog
     path('blog/', include('blog.urls')),
+    # Paths de pages
+    path('page/', include('pages.urls')),
     # Paths de services
     path('services/', include('services.urls')),
+    # Paths de contact
+    path('contact/', include('contact.urls')),
     # Paths del admin -- viene ya generada
     path("admin/", admin.site.urls),
 ]
@@ -32,4 +36,3 @@ urlpatterns = [
 if settings.DEBUG:
     from django.conf.urls.static import static
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-

@@ -25,7 +25,6 @@ SECRET_KEY = "django-insecure-r4b3egr5_yia@++@#qlczd*jn)_bqu16a78l3%vlc!yr4@z=!$
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-
 ALLOWED_HOSTS = []
 
 
@@ -39,8 +38,12 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "blog",
+    "ckeditor",
+    "contact",
     "core",
+    "pages.apps.PagesConfig",
     "services.apps.ServicesConfig",
+    "social.apps.SocialConfig"
 ]
 
 MIDDLEWARE = [
@@ -66,6 +69,7 @@ TEMPLATES = [
                 "django.template.context_processors.request",
                 "django.contrib.auth.context_processors.auth",
                 "django.contrib.messages.context_processors.messages",
+                'social.processors.ctx_dict'
             ],
         },
     },
@@ -129,5 +133,26 @@ STATIC_URL = "static/"
 #Media files
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+
+#CKeditor
+# Ckeditor
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': 'Custom',
+        'toolbar_Custom': [
+            ['Bold', 'Italic', 'Underline'],
+            ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-',
+            'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock'],
+            ['Link', 'Unlink'],
+            ['RemoveFormat', 'Source']
+        ]
+    }
+}
+
+#Email config
+EMAIL_HOST = 'sandbox.smtp.mailtrap.io'
+EMAIL_HOST_USER = '30b1b514d3028d'
+EMAIL_HOST_PASSWORD = '9b4e957f78b266'
+EMAIL_PORT = '2525'
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
